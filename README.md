@@ -1,2 +1,2 @@
-# Click-GUI-Gen
-This website allows users to generate a Click-GUI data pack for minecraft. This is achieved with a combination of HTML, CSS, and JavaScript Libraries.
+# Itchs' Creations
+This website is my personal portfolio website! My data packs, maps, and generators will go here. So far I only have a home page and a Click-GUI Generator though. :(
