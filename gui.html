@@ -22,6 +22,7 @@
     </style>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="nav_override sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="index.html">Itchs' Creations</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,11 +37,11 @@
     <div class="container">
 
       <br>
-
+      <!-- Main Jumbotron & Information -->
       <div class="jumbotron popout_bg text-light">
         <h1 class="display-4">Click-GUI Generator</h1>
           <p class="lead">Generates a data-pack which has Click GUIs in it! Created by Itchs#7216.<br> If you have any issues, feel free to contact me on Discord. My DMs are open! :) Currently only works for 1.16, Not 1.17.</p>
-          <pre class="bg-dark text-light p-2 mb-5"><code>execute as &lt;summoner&gt; at @s run function itchs_gui:summon</code></pre>
+          <pre class="bg-dark text-light p-2 mb-5"><code>execute as &lt;summoner&gt; at @s run function &lt;namespace&gt;:summon</code></pre>
       </div>
 
     </div>
@@ -50,24 +51,30 @@
     <center>
     <div class="wrapper">
       <form class="form">
+        <!-- Objectives & Tags -->
         <h2>Objectives & Tags</h1>
         <br>
+
         <label id="scoreboardObj">
           <input type="text" name="scoreboardObj" placeholder="Scoreboard Obj" required class="form_box"/> 
         </label>
         <br>
+
         <label id="minecart_tag">
           <input type="text" name="minecart_tag" placeholder="Minecart Tag, e.g. GUI" required class="form_box"/> 
         </label>
         <br>
+
         <label id="namespace">
           <input type="text" name="namespace" placeholder="Namespace e.g. gui" required class="form_box"/>
         </label>
+
         <br>  
         <br>
         <br>
-        <h2 style="margin-left:4em;">GUI Slots</h2>
-        <p style="font-size:15px;">Put in whatever you want to be put in a specific slot. e.g. <br><div class="code_block" style="text-align: left;"><code>bone{Enchantments:[{id:"unbreakng",lvl:1}],HideFlags:31,display:[Name:'[{"text":"Colorful Bone!","color":"yellow"}]'],gui:1b}</code></div><br>Make sure to put a {gui:1b} in there somewhere or it wont work! </p>
+        <!-- GUI Slots -->
+        <h2>GUI Slots</h2>
+        <p style="font-size:15px;">Put in whatever you want to be put in a specific slot. e.g. <br><div class="code_block" style="text-align: left;"><code>bone{Enchantments:[{id:"unbreaking",lvl:1}],HideFlags:31,display:{Name:'[{"text":"Colorful Bone!","color":"yellow"}]'},gui:1b}</code></div><br>Make sure to put a {gui:1b} in there somewhere or it wont work! </p>
         <br>
         <label id="slot1">
           <input type="text" name="slot1" placeholder="Slot One" required class="form_box_slot"/> 
@@ -177,10 +184,104 @@
           <input type="text" name="slot27" placeholder="Slot Twenty-Seven"  class="form_box_slot"/> 
         </label>
         <br>
+        <br>
+        <br>
+        <!-- Click Events -->
+        <h2>Click Events</h2>
+        <p class="my-4 lead">Enter a command in each slot for what you want to happen when that slot is clicked. E.g:<br><div class="code_block"><code>tellraw @p {"text":"You clicked on me!","color":"red"}</code></div><br>Just make sure not to put a <code style="background-color: #343a40 !important;">/</code> in there!</p>
+        <br>
+        <label id="clickEventSlot1">
+          <input type="text" name="clickEventSlot1" placeholder="Click-Event (Slot 1)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot2">
+          <input type="text" name="clickEventSlot2" placeholder="Click-Event (Slot 2)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot3">
+          <input type="text" name="clickEventSlot3" placeholder="Click-Event (Slot 3)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot4">
+          <input type="text" name="clickEventSlot4" placeholder="Click-Event (Slot 4)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot5">
+          <input type="text" name="clickEventSlot5" placeholder="Click-Event (Slot 5)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot6">
+          <input type="text" name="clickEventSlot6" placeholder="Click-Event (Slot 6)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot7">
+          <input type="text" name="clickEventSlot7" placeholder="Click-Event (Slot 7)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot8">
+          <input type="text" name="clickEventSlot8" placeholder="Click-Event (Slot 8)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot9">
+          <input type="text" name="clickEventSlot9" placeholder="Click-Event (Slot 9)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot10">
+          <input type="text" name="clickEventSlot10" placeholder="Click-Event (Slot 10)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot11">
+          <input type="text" name="clickEventSlot11" placeholder="Click-Event (Slot 11)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot12">
+          <input type="text" name="clickEventSlot12" placeholder="Click-Event (Slot 12)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot13">
+          <input type="text" name="clickEventSlot13" placeholder="Click-Event (Slot 13)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot14">
+          <input type="text" name="clickEventSlot14" placeholder="Click-Event (Slot 14)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot15">
+          <input type="text" name="clickEventSlot15" placeholder="Click-Event (Slot 15)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot16">
+          <input type="text" name="clickEventSlot16" placeholder="Click-Event (Slot 16)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot17">
+          <input type="text" name="clickEventSlot17" placeholder="Click-Event (Slot 17)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot18">
+          <input type="text" name="clickEventSlot18" placeholder="Click-Event (Slot 18)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot19">
+          <input type="text" name="clickEventSlot19" placeholder="Click-Event (Slot 19)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot20">
+          <input type="text" name="clickEventSlot20" placeholder="Click-Event (Slot 20)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot21">
+          <input type="text" name="clickEventSlot21" placeholder="Click-Event (Slot 21)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot22">
+          <input type="text" name="clickEventSlot22" placeholder="Click-Event (Slot 22)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot23">
+          <input type="text" name="clickEventSlot23" placeholder="Click-Event (Slot 23)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot24">
+          <input type="text" name="clickEventSlot24" placeholder="Click-Event (Slot 24)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot25">
+          <input type="text" name="clickEventSlot25" placeholder="Click-Event (Slot 25)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot26">
+          <input type="text" name="clickEventSlot26" placeholder="Click-Event (Slot 26)"  class="form_box_slot"/> 
+        </label>
+        <label id="clickEventSlot27">
+          <input type="text" name="clickEventSlot27" placeholder="Click-Event (Slot 27)"  class="form_box_slot"/> 
+        </label>
+
+
+
+        <!-- Generate Buttons -->
+        <br>
+        <br>
+        <br>
         <label id="submit">
           <input type="submit" value="Generate data pack" class="btn btn-success btn-block btn-lg my-4 generate_btn_datapack">
         </label>
-        <a download="pack.zip" href="downloads/pack.zip"><button type="button" class="btn btn-success btn-block btn-lg my-4" onclick="getContactInfo()">Download Resource Pack</button></a>
+        <a download="pack.zip" href="downloads/pack.zip"><button type="button" class="btn btn-success btn-block btn-lg my-4">Download Resource Pack</button></a>
       </form>
     </div>
   </center>
@@ -190,8 +291,6 @@
       const wrapper = document.querySelector('.wrapper'),
         form = wrapper.querySelectorAll('.form'),
         submitInput = form[0].querySelector('input[type="submit"]');
-      
-      
 
       // Download data pack function
       function download(e){
@@ -204,7 +303,8 @@
         // Call vars From Form
         scoreboardObj = formData.get('scoreboardObj');
         minecart_tag = formData.get('minecart_tag');
-        namespace = formData.get('namespace');
+        namespacevar = formData.get('namespace');
+        
         slot1 = formData.get('slot1');
         slot2 = formData.get('slot2');
         slot3 = formData.get('slot3');
@@ -232,6 +332,32 @@
         slot25 = formData.get('slot25');
         slot26 = formData.get('slot26');
         slot27 = formData.get('slot27');
+        clickEventSlot1 = formData.get('clickEventSlot1');
+        clickEventSlot2 = formData.get('clickEventSlot2');
+        clickEventSlot3 = formData.get('clickEventSlot3');
+        clickEventSlot4 = formData.get('clickEventSlot4');
+        clickEventSlot5 = formData.get('clickEventSlot5');
+        clickEventSlot6 = formData.get('clickEventSlot6');
+        clickEventSlot7 = formData.get('clickEventSlot7');
+        clickEventSlot8 = formData.get('clickEventSlot8');
+        clickEventSlot9 = formData.get('clickEventSlot9');
+        clickEventSlot10 = formData.get('clickEventSlot10');
+        clickEventSlot11 = formData.get('clickEventSlot11');
+        clickEventSlot12 = formData.get('clickEventSlot12');
+        clickEventSlot13 = formData.get('clickEventSlot13');
+        clickEventSlot14 = formData.get('clickEventSlot14');
+        clickEventSlot15 = formData.get('clickEventSlot15');
+        clickEventSlot16 = formData.get('clickEventSlot16');
+        clickEventSlot17 = formData.get('clickEventSlot17');
+        clickEventSlot18 = formData.get('clickEventSlot18');
+        clickEventSlot19 = formData.get('clickEventSlot19');
+        clickEventSlot20 = formData.get('clickEventSlot20');
+        clickEventSlot21 = formData.get('clickEventSlot21');
+        clickEventSlot22 = formData.get('clickEventSlot22');
+        clickEventSlot23 = formData.get('clickEventSlot23');
+        clickEventSlot24 = formData.get('clickEventSlot24');
+        clickEventSlot25 = formData.get('clickEventSlot25');
+        clickEventSlot26 = formData.get('clickEventSlot26');
 
 
         // Init zip var to allow creation of files/folders
@@ -244,23 +370,55 @@
 
         // Minecraft folder & contents
         var mc_func = data.folder("minecraft").folder("tags").folder("functions");
-        mc_func.file(`tick.json",'{"replace":false,"values":["${namespace}:tick"]}`);
-        mc_func.file(`load.json",'{"replace":false,"values":["${namespace}:load"]}`);
+        mc_func.file("tick.json",`{"replace":false,"values":["${namespacevar}:tick']}`);
+        mc_func.file("load.json",`{"replace":false,"values":["${namespacevar}:load']}`);
         
         // Namespace Folder
-        var namespace = data.folder(`${namespace}`).folder("functions");
+        var namespace = data.folder(`${namespacevar}`).folder("functions");
         
         // Tick function
-        namespace.file("tick.mcfunction",`execute as @e[tag=${minecart_tag}] at @s run tp @s @e[tag=armor_stand_GUI,sort=nearest,limit=1]\nexecute store result score gui.slot1 GUI run clear @a ${slot1} 0\nexecute store result score gui.slot2 GUI run clear @a ${slot2} 0\nexecute store result score gui.slot3 GUI run clear @a ${slot3} 0\nexecute store result score gui.slot4 GUI run clear @a ${slot4} 0\nexecute store result score gui.slot5 GUI run clear @a ${slot5} 0\nexecute store result score gui.slot6 GUI run clear @a ${slot6} 0\nexecute store result score gui.slot7 GUI run clear @a ${slot7} 0\nexecute store result score gui.slot8 GUI run clear @a ${slot8} 0\nexecute store result score gui.slot9 GUI run clear @a ${slot9} 0\nexecute store result score gui.slot10 GUI run clear @a ${slot10} 0\nexecute store result score gui.slot11 GUI run clear @a ${slot11} 0\nexecute store result score gui.slot12 GUI run clear @a ${slot12} 0\nexecute store result score gui.slot13 GUI run clear @a ${slot13} 0\nexecute store result score gui.slot14 GUI run clear @a ${slot14} 0\nexecute store result score gui.slot15 GUI run clear @a ${slot15} 0\nexecute store result score gui.slot16 GUI run clear @a ${slot16} 0\nexecute store result score gui.slot17 GUI run clear @a ${slot17} 0\nexecute store result score gui.slot18 GUI run clear @a ${slot18} 0\nexecute store result score gui.slot19 GUI run clear @a ${slot19} 0\nexecute store result score gui.slot20 GUI run clear @a ${slot20} 0\nexecute store result score gui.slot21 GUI run clear @a ${slot21} 0\nexecute store result score gui.slot22 GUI run clear @a ${slot22} 0\nexecute store result score gui.slot23 GUI run clear @a ${slot23} 0\nexecute store result score gui.slot24 GUI run clear @a ${slot24} 0\nexecute store result score gui.slot25 GUI run clear @a ${slot25} 0\nexecute store result score gui.slot26 GUI run clear @a ${slot26} 0\nexecute store result score gui.slot27 GUI run clear @a ${slot27} 0\n\nexecute if score gui.slot1 GUI >= GUIMarker GUI run function gui:slots/slot1\nexecute if score gui.slot2 GUI >= GUIMarker GUI run function gui:slots/slot2\nexecute if score gui.slot3 GUI >= GUIMarker GUI run function gui:slots/slot3\nexecute if score gui.slot4 GUI >= GUIMarker GUI run function gui:slots/slot4\nexecute if score gui.slot5 GUI >= GUIMarker GUI run function gui:slots/slot5\nexecute if score gui.slot6 GUI >= GUIMarker GUI run function gui:slots/slot6\nexecute if score gui.slot7 GUI >= GUIMarker GUI run function gui:slots/slot7\nexecute if score gui.slot8 GUI >= GUIMarker GUI run function gui:slots/slot8\nexecute if score gui.slot9 GUI >= GUIMarker GUI run function gui:slots/slot9\nexecute if score gui.slot10 GUI >= GUIMarker GUI run function gui:slots/slot10\nexecute if score gui.slot11 GUI >= GUIMarker GUI run function gui:slots/slot11\nexecute if score gui.slot12 GUI >= GUIMarker GUI run function gui:slots/slot12\nexecute if score gui.slot13 GUI >= GUIMarker GUI run function gui:slots/slot13\nexecute if score gui.slot14 GUI >= GUIMarker GUI run function gui:slots/slot14\nexecute if score gui.slot15 GUI >= GUIMarker GUI run function gui:slots/slot15\nexecute if score gui.slot16 GUI >= GUIMarker GUI run function gui:slots/slot16\nexecute if score gui.slot17 GUI >= GUIMarker GUI run function gui:slots/slot17\nexecute if score gui.slot18 GUI >= GUIMarker GUI run function gui:slots/slot18\nexecute if score gui.slot19 GUI >= GUIMarker GUI run function gui:slots/slot19\nexecute if score gui.slot20 GUI >= GUIMarker GUI run function gui:slots/slot20\nexecute if score gui.slot21 GUI >= GUIMarker GUI run function gui:slots/slot21\nexecute if score gui.slot22 GUI >= GUIMarker GUI run function gui:slots/slot22\nexecute if score gui.slot23 GUI >= GUIMarker GUI run function gui:slots/slot23\nexecute if score gui.slot24 GUI >= GUIMarker GUI run function gui:slots/slot24\nexecute if score gui.slot25 GUI >= GUIMarker GUI run function gui:slots/slot25\nexecute if score gui.slot26 GUI >= GUIMarker GUI run function gui:slots/slot26\nexecute if score gui.slot27 GUI >= GUIMarker GUI run function gui:slots/slot27\n`);
+        namespace.file("tick.mcfunction",`execute as @e[tag=${minecart_tag}] at @s run tp @s @e[tag=armor_stand_GUI,sort=nearest,limit=1]\nexecute store result score gui.slot1 GUI run clear @a ${slot1} 0\nexecute store result score gui.slot2 GUI run clear @a ${slot2} 0\nexecute store result score gui.slot3 GUI run clear @a ${slot3} 0\nexecute store result score gui.slot4 GUI run clear @a ${slot4} 0\nexecute store result score gui.slot5 GUI run clear @a ${slot5} 0\nexecute store result score gui.slot6 GUI run clear @a ${slot6} 0\nexecute store result score gui.slot7 GUI run clear @a ${slot7} 0\nexecute store result score gui.slot8 GUI run clear @a ${slot8} 0\nexecute store result score gui.slot9 GUI run clear @a ${slot9} 0\nexecute store result score gui.slot10 GUI run clear @a ${slot10} 0\nexecute store result score gui.slot11 GUI run clear @a ${slot11} 0\nexecute store result score gui.slot12 GUI run clear @a ${slot12} 0\nexecute store result score gui.slot13 GUI run clear @a ${slot13} 0\nexecute store result score gui.slot14 GUI run clear @a ${slot14} 0\nexecute store result score gui.slot15 GUI run clear @a ${slot15} 0\nexecute store result score gui.slot16 GUI run clear @a ${slot16} 0\nexecute store result score gui.slot17 GUI run clear @a ${slot17} 0\nexecute store result score gui.slot18 GUI run clear @a ${slot18} 0\nexecute store result score gui.slot19 GUI run clear @a ${slot19} 0\nexecute store result score gui.slot20 GUI run clear @a ${slot20} 0\nexecute store result score gui.slot21 GUI run clear @a ${slot21} 0\nexecute store result score gui.slot22 GUI run clear @a ${slot22} 0\nexecute store result score gui.slot23 GUI run clear @a ${slot23} 0\nexecute store result score gui.slot24 GUI run clear @a ${slot24} 0\nexecute store result score gui.slot25 GUI run clear @a ${slot25} 0\nexecute store result score gui.slot26 GUI run clear @a ${slot26} 0\nexecute store result score gui.slot27 GUI run clear @a ${slot27} 0\n\nexecute if score gui.slot1 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot1\nexecute if score gui.slot2 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot2\nexecute if score gui.slot3 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot3\nexecute if score gui.slot4 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot4\nexecute if score gui.slot5 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot5\nexecute if score gui.slot6 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot6\nexecute if score gui.slot7 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot7\nexecute if score gui.slot8 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot8\nexecute if score gui.slot9 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot9\nexecute if score gui.slot10 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot10\nexecute if score gui.slot11 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot11\nexecute if score gui.slot12 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot12\nexecute if score gui.slot13 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot13\nexecute if score gui.slot14 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot14\nexecute if score gui.slot15 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot15\nexecute if score gui.slot16 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot16\nexecute if score gui.slot17 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot17\nexecute if score gui.slot18 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot18\nexecute if score gui.slot19 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot19\nexecute if score gui.slot20 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot20\nexecute if score gui.slot21 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot21\nexecute if score gui.slot22 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot22\nexecute if score gui.slot23 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot23\nexecute if score gui.slot24 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot24\nexecute if score gui.slot25 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot25\nexecute if score gui.slot26 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot26\nexecute if score gui.slot27 GUI >= GUIMarker GUI run function ${namespacevar}:slots/slot27\n`);
 
         // Summon function
-        namespace.file("summon.mcfunction",`summon armor_stand ~ ~ ~ {Invulnerable:1b,Invisible:1b,NoGravity:1b,Small:1b,Tags:["armor_stand_GUI"],NoBasePlate:1b}\nsummon chest_minecart ~ ~ ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,Tags:["${minecart_tag}"]}`)
+        namespace.file("summon.mcfunction",`summon armor_stand ~ ~ ~ {Invulnerable:1b,Invisible:1b,NoGravity:1b,Small:1b,Tags:["armor_stand_GUI"],NoBasePlate:1b}\nsummon chest_minecart ~ ~ ~ {Silent:1b,NoGravity:1b,Invulnerable:1b,Tags:["${minecart_tag}"]}`);
 
         // Kill function
-        namespace.file("kill.mcfunction",`execute as @p at @s run kill @e[tag=${minecart_tag},limit=1,sort=nearest]\nexecute as @p at @s run kill @e[tag=armor_stand_GUI,limit=1,sort=nearest]`)
+        namespace.file("kill.mcfunction",`execute as @p at @s run kill @e[tag=${minecart_tag},limit=1,sort=nearest]\nexecute as @p at @s run kill @e[tag=armor_stand_GUI,limit=1,sort=nearest]`);
         
         // Resetpages function
-        namespace.file("resetpages.mcfunction",`replaceitem entity @e[tag=${minecart_tag}] container.0 ${slot1}\nreplaceitem entity @e[tag=${minecart_tag}] container.1 ${slot2}\nreplaceitem entity @e[tag=${minecart_tag}] container.2 ${slot3}\nreplaceitem entity @e[tag=${minecart_tag}] container.3 ${slot4}\nreplaceitem entity @e[tag=${minecart_tag}] container.4 ${slot5}\nreplaceitem entity @e[tag=${minecart_tag}] container.5 ${slot6}\nreplaceitem entity @e[tag=${minecart_tag}] container.6 ${slot7}\nreplaceitem entity @e[tag=${minecart_tag}] container.7 ${slot8}\nreplaceitem entity @e[tag=${minecart_tag}] container.8 ${slot9}\nreplaceitem entity @e[tag=${minecart_tag}] container.9 ${slot10}\nreplaceitem entity @e[tag=${minecart_tag}] container.10 ${slot11}\nreplaceitem entity @e[tag=${minecart_tag}] container.11 ${slot12}\nreplaceitem entity @e[tag=${minecart_tag}] container.12 ${slot13}\nreplaceitem entity @e[tag=${minecart_tag}] container.13 ${slot14}\nreplaceitem entity @e[tag=${minecart_tag}] container.14 ${slot15}\nreplaceitem entity @e[tag=${minecart_tag}] container.15 ${slot16}\nreplaceitem entity @e[tag=${minecart_tag}] container.16 ${slot17}\nreplaceitem entity @e[tag=${minecart_tag}] container.17 ${slot18}\nreplaceitem entity @e[tag=${minecart_tag}] container.18 ${slot19}\nreplaceitem entity @e[tag=${minecart_tag}] container.19 ${slot20}\nreplaceitem entity @e[tag=${minecart_tag}] container.20 ${slot21}\nreplaceitem entity @e[tag=${minecart_tag}] container.21 ${slot22}\nreplaceitem entity @e[tag=${minecart_tag}] container.22 ${slot23}\nreplaceitem entity @e[tag=${minecart_tag}] container.23 ${slot24}\nreplaceitem entity @e[tag=${minecart_tag}] container.24 ${slot25}\nreplaceitem entity @e[tag=${minecart_tag}] container.25 ${slot26}\nreplaceitem entity @e[tag=${minecart_tag}] container.26 ${slot27}\n`)
+        namespace.file("resetpages.mcfunction",`replaceitem entity @e[tag=${minecart_tag}] container.0 ${slot1}\nreplaceitem entity @e[tag=${minecart_tag}] container.1 ${slot2}\nreplaceitem entity @e[tag=${minecart_tag}] container.2 ${slot3}\nreplaceitem entity @e[tag=${minecart_tag}] container.3 ${slot4}\nreplaceitem entity @e[tag=${minecart_tag}] container.4 ${slot5}\nreplaceitem entity @e[tag=${minecart_tag}] container.5 ${slot6}\nreplaceitem entity @e[tag=${minecart_tag}] container.6 ${slot7}\nreplaceitem entity @e[tag=${minecart_tag}] container.7 ${slot8}\nreplaceitem entity @e[tag=${minecart_tag}] container.8 ${slot9}\nreplaceitem entity @e[tag=${minecart_tag}] container.9 ${slot10}\nreplaceitem entity @e[tag=${minecart_tag}] container.10 ${slot11}\nreplaceitem entity @e[tag=${minecart_tag}] container.11 ${slot12}\nreplaceitem entity @e[tag=${minecart_tag}] container.12 ${slot13}\nreplaceitem entity @e[tag=${minecart_tag}] container.13 ${slot14}\nreplaceitem entity @e[tag=${minecart_tag}] container.14 ${slot15}\nreplaceitem entity @e[tag=${minecart_tag}] container.15 ${slot16}\nreplaceitem entity @e[tag=${minecart_tag}] container.16 ${slot17}\nreplaceitem entity @e[tag=${minecart_tag}] container.17 ${slot18}\nreplaceitem entity @e[tag=${minecart_tag}] container.18 ${slot19}\nreplaceitem entity @e[tag=${minecart_tag}] container.19 ${slot20}\nreplaceitem entity @e[tag=${minecart_tag}] container.20 ${slot21}\nreplaceitem entity @e[tag=${minecart_tag}] container.21 ${slot22}\nreplaceitem entity @e[tag=${minecart_tag}] container.22 ${slot23}\nreplaceitem entity @e[tag=${minecart_tag}] container.23 ${slot24}\nreplaceitem entity @e[tag=${minecart_tag}] container.24 ${slot25}\nreplaceitem entity @e[tag=${minecart_tag}] container.25 ${slot26}\nreplaceitem entity @e[tag=${minecart_tag}] container.26 ${slot27}\n`);
+
+        // Slots folder
+        var slotsFolder = namespace.folder("slots");
+
+        // Slot files
+        slotsFolder.file("slot1.mcfunction",`clear @p ${slot1}\nfunction ${namespacevar}:resetpages\n${clickEventSlot1}`);
+        slotsFolder.file("slot2.mcfunction",`clear @p ${slot2}\nfunction ${namespacevar}:resetpages\n${clickEventSlot2}`);
+        slotsFolder.file("slot3.mcfunction",`clear @p ${slot3}\nfunction ${namespacevar}:resetpages\n${clickEventSlot3}`);
+        slotsFolder.file("slot4.mcfunction",`clear @p ${slot4}\nfunction ${namespacevar}:resetpages\n${clickEventSlot4}`);
+        slotsFolder.file("slot5.mcfunction",`clear @p ${slot5}\nfunction ${namespacevar}:resetpages\n${clickEventSlot5}`);
+        slotsFolder.file("slot6.mcfunction",`clear @p ${slot6}\nfunction ${namespacevar}:resetpages\n${clickEventSlot6}`);
+        slotsFolder.file("slot7.mcfunction",`clear @p ${slot7}\nfunction ${namespacevar}:resetpages\n${clickEventSlot7}`);
+        slotsFolder.file("slot8.mcfunction",`clear @p ${slot8}\nfunction ${namespacevar}:resetpages\n${clickEventSlot8}`);
+        slotsFolder.file("slot9.mcfunction",`clear @p ${slot9}\nfunction ${namespacevar}:resetpages\n${clickEventSlot9}`);
+        slotsFolder.file("slot10.mcfunction",`clear @p ${slot10}\nfunction ${namespacevar}:resetpages\n${clickEventSlot10}`);
+        slotsFolder.file("slot11.mcfunction",`clear @p ${slot11}\nfunction ${namespacevar}:resetpages\n${clickEventSlot11}`);
+        slotsFolder.file("slot12.mcfunction",`clear @p ${slot12}\nfunction ${namespacevar}:resetpages\n${clickEventSlot12}`);
+        slotsFolder.file("slot13.mcfunction",`clear @p ${slot13}\nfunction ${namespacevar}:resetpages\n${clickEventSlot13}`);
+        slotsFolder.file("slot14.mcfunction",`clear @p ${slot14}\nfunction ${namespacevar}:resetpages\n${clickEventSlot14}`);
+        slotsFolder.file("slot15.mcfunction",`clear @p ${slot15}\nfunction ${namespacevar}:resetpages\n${clickEventSlot15}`);
+        slotsFolder.file("slot16.mcfunction",`clear @p ${slot16}\nfunction ${namespacevar}:resetpages\n${clickEventSlot16}`);
+        slotsFolder.file("slot17.mcfunction",`clear @p ${slot17}\nfunction ${namespacevar}:resetpages\n${clickEventSlot17}`);
+        slotsFolder.file("slot18.mcfunction",`clear @p ${slot18}\nfunction ${namespacevar}:resetpages\n${clickEventSlot18}`);
+        slotsFolder.file("slot19.mcfunction",`clear @p ${slot19}\nfunction ${namespacevar}:resetpages\n${clickEventSlot19}`);
+        slotsFolder.file("slot20.mcfunction",`clear @p ${slot20}\nfunction ${namespacevar}:resetpages\n${clickEventSlot20}`);
+        slotsFolder.file("slot21.mcfunction",`clear @p ${slot21}\nfunction ${namespacevar}:resetpages\n${clickEventSlot21}`);
+        slotsFolder.file("slot22.mcfunction",`clear @p ${slot22}\nfunction ${namespacevar}:resetpages\n${clickEventSlot22}`);
+        slotsFolder.file("slot23.mcfunction",`clear @p ${slot23}\nfunction ${namespacevar}:resetpages\n${clickEventSlot23}`);
+        slotsFolder.file("slot24.mcfunction",`clear @p ${slot24}\nfunction ${namespacevar}:resetpages\n${clickEventSlot24}`);
+        slotsFolder.file("slot25.mcfunction",`clear @p ${slot25}\nfunction ${namespacevar}:resetpages\n${clickEventSlot25}`);
+        slotsFolder.file("slot26.mcfunction",`clear @p ${slot26}\nfunction ${namespacevar}:resetpages\n${clickEventSlot26}`);
+        slotsFolder.file("slot27.mcfunction",`clear @p ${slot27}\nfunction ${namespacevar}:resetpages\n${clickEventSlot27}`);
 
         // Load function
         namespace.file("load.mcfunction",`scoreboard objectives add ${scoreboardObj} dummy\nscoreboard players set GUIMarker ${scoreboardObj} 1`);
@@ -268,12 +426,6 @@
         zip.generateAsync({type:"blob"}).then(function(content){saveAs(content, "itchs_chestgui.zip")});}
 
       document.addEventListener('DOMContentLoaded', function(){submitInput.addEventListener('click', download, false)},false);    
-
-      // Alert - use to debug
-      // alert('Objectives & Tags: ' + formData.get('scoreboardObj') + ' - '+ formData.get('minecart_tag') + ' Slots: ' + formData.get('slot1') + ' - ' + formData.get('slot2') + ' - ' + formData.get('slot3') + ' - ' + formData.get('slot4') + ' - ' + formData.get('slot5') + ' - ' + formData.get('slot6') + ' - ' + formData.get('slot7') + ' - ' + formData.get('slot8') + ' - ' + formData.get('slot9') + ' - ' + formData.get('slot10') + ' - ' + formData.get('slot11') + ' - ' + formData.get('slot12') + ' - ' + formData.get('slot13') + ' - ' + formData.get('slot14') + ' - ' + formData.get('slot15') + ' - ' + formData.get('slot16') + ' - ' + formData.get('slot17') + ' - ' + formData.get('slot18') + ' - ' + formData.get('slot19') + ' - ' + formData.get('slot20') + ' - ' + formData.get('slot21') + ' - ' + formData.get('slot22') + ' - ' + formData.get('slot23') + ' - ' + formData.get('slot24') + ' - ' + formData.get('slot25') + ' - ' + formData.get('slot2') + ' - ' + formData.get('slot2') + ' - ' + formData.get('slot2') + ' - ' + formData.get('slot2') + ' - ' + formData.get('slot26') + ' - ' + formData.get('slot27'));
-
-      // Add file / folders with vars: 
-
     </script>
   </body>
 </html>
