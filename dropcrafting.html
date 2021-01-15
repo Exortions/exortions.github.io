@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- This code was created by Itchs#7216 on discord.
+    This code is protected by the MIT license:
+    Copyright 2021 Itchs
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/dropcrafting.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js" integrity="sha512-y3o0Z5TJF1UsKjs/jS2CDkeHN538bWsftxO9nctODL5W40nyXIbs0Pgyu7//icrQY9m6475gLaVr39i/uh/nLA==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+
+  <title>Itchs | Drop-Crafting Generator</title>
+
+  <style>
+   .nav_override {
+     background-color: #282c2f !important;
+   }
+  </style>
+ </head>
+ <body>
+  <!-- Navbar -->
+  <nav class="nav_override sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+   <a class="navbar-brand" href="index.html">Itchs' Creations</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+     <div class="navbar-nav">
+       <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+     </div>
+   </div>
+ </nav>
+ <div class="container">
+
+   <br>
+   <!-- Main Jumbotron & Information -->
+   <div class="jumbotron popout_bg text-light">
+     <h1 class="display-4">Drop Crafting Generator</h1>
+       <p class="lead">This page can be used to generate drop crafting command! Created by Itchs#7216.<br> If you have any issues, feel free to contact me on Discord! Works for 1.13+</p>
+   </div>
+
+ </div>
+ <br>
+ <br>
+ <br>
+  <center>
+  <!--Form-->
+  <div class="wrapper">
+    <form class="form">
+      <!--Text-->
+      <h2>Items</h2>
+      <p class="lead my-4">Put what items you want to be in the crafting system! E.g.<br><div class="code_block" style="text-align: left;"><code>diamond_sword{Enchantments:[{id:"sharpness",lvl:3}]}</code></div></p>
+      <br>
+      <label id="item1">
+        <input type="text" name="item1" placeholder="Item 1" class="form_box"/> <input type="text" name="item1count" placeholder="Count (1-64)" class="form_box" style="width: 135px !important;"/>
+      </label>
+      <br>
+      
+      <label id="item2">
+        <input type="text" name="item2" placeholder="Item 2" class="form_box"/> <input type="text" name="item2count" placeholder="Count (1-64)" class="form_box" style="width: 135px !important;"/>
+      </label>
+      <!--
+      <br>
+      <label id="item3">
+        <input type="text" name="item3" placeholder="Item 3" class="form_box"/> <input type="text" name="item3count" placeholder="Count (1-64)" class="form_box" style="width: 135px !important;"/>
+      </label>
+      <br>
+      <label id="item4">
+        <input type="text" name="item4" placeholder="Item 4" class="form_box"/> <input type="text" name="item4count" placeholder="Count (1-64)" class="form_box" style="width: 135px !important;"/>
+      </label>
+      <br>
+      <label id="item5">
+        <input type="text" name="item5" placeholder="Item 5" class="form_box"/> <input type="text" name="item5count" placeholder="Count (1-64)" class="form_box" style="width: 135px !important;"/>
+      </label>
+      <br>
+      -->
+      <br>
+      <label id="result">
+        <p class="my-4 lead">Result when item is crafted e.g. <div class="code_block" style="text-align: left;"><code>diamond_sword</code></div></p><input type="text" name="result" placeholder="Result" class="form_box"/> <input type="text" name="resultcount" placeholder="Count (1-64)" class="form_box" style="width: 135px !important;"/><p class="my-4 lead">Result NBT e.g.<div class="code_block" style="text-align: left;"><code>Enchantments:[{id:"sharpness",lvl:5}],HideFlags:31,display:{Name:'[{"text":"A Diamond Sword!","color":"dark_aqua","italic":false,"bold":true}]'}</code></div></p><input type="text" name="resultnbt" placeholder="Result NBT" class="form_box"/>
+      </label>
+      <!--{Enchantments:[{id:"unbreaking",lvl:1}],HideFlags:31,display:{Name:'[{"text":"A bone!","color":"dark_aqua","italic":false,"bold":true}]'}}-->
+      <br>
+      <h2>Other</h2>
+      <label id="namespace">
+        <div><p class="my-4 lead">For datapacks only (Don't do this if you are doing the command)</p><input type="text" name="namespace" placeholder="Data pack namespace" class="form_box"/></div>
+      </label>
+      <label id="particle">
+        <div><p class="my-4 lead">Put the particle you want to appear when item is crafted (e.g. smoke)</p><input type="text" name="particle" placeholder="Particle" class="form_box"/></div>
+      </label>
+      <label id="sound">
+        <div><p class="my-4 lead">Put the sound you want to hear when item is crafted (e.g. block.lava.extinguish)</p><input type="text" name="sound" placeholder="Sound" class="form_box"/></div>
+      </label>
+      <br>
+      <label id="submit">
+        <input type="submit" value="Generate Data Pack" class="btn btn-success btn-block btn-lg my-4 generate_btn">
+      </label>
+        <button class="btn btn-success btn-block btn-lg my-4 generate_btn" onclick="generateCommand()">Generate Command</button>
+    </form>
+  </div>
+  </center>
+  <script>
+    // Detect when Submit button pressed
+    const wrapper = document.querySelector('.wrapper'),
+        form = wrapper.querySelectorAll('.form'),
+        submitInput = form[0].querySelector('input[type="submit"]');
+
+    function downloadDataPack(e) {
+
+      e.preventDefault();
+
+      // Init formData
+      var formData = new FormData(form[0]);
+
+      // Call variables from formData
+      item1 = formData.get('item1');
+      item1count = formData.get('item1count');
+      item2 = formData.get('item2');
+      item2count = formData.get('item2count');
+      //item3 = formData.get('item3');
+      //item3count = formData.get('item3count');
+      //item4 = formData.get('item4');
+      //item4count = formData.get('item4count');
+      //item5 = formData.get('item5');
+      //item5count = formData.get('item5count');
+
+      result = formData.get('result');
+      resultcount = formData.get('resultcount');
+      resultNBT = formData.get('resultnbt');
+
+      namespacevar = formData.get('namespace');
+      particle = formData.get('particle');
+      sound = formData.get('sound')
+
+      // Init zip var to allow creation of files/folders
+      var zip = new JSZip();
+
+
+      // Pack mcmeta & data folder
+      zip.file("pack.mcmeta", '{ "pack": {"pack_format": 6,"description": "Drop Crafting Data Pack - Generated at https://itchss.github.io"}}');
+      var data = zip.folder("data");
+
+      // Minecraft folder & contents
+      var mc_func = data.folder("minecraft").folder("tags").folder("functions");
+      mc_func.file("tick.json",`{"replace":false,"values":["${namespacevar}:tick"]}`);
+      mc_func.file("load.json",`{"replace":false,"values":["${namespacevar}:load"]}`);
+
+      // Namespace Folder
+      var namespace = data.folder(`${namespacevar}`).folder("functions");
+
+      // Tick function
+      namespace.file("tick.mcfunction",`#Tick function - Generated at itchss.github.io\nexecute as @e[type=item,nbt={Item:{id:"minecraft:${item1}",Count:${item1count}b}}] at @s if entity @e[type=item,distance=..1,nbt={Item:{id:"minecraft:${item2}",Count:${item2count}b}}] run function ${namespacevar}:result`);
+
+      // Load function
+      namespace.file("load.mcfunction","#Load function - Generated at itchss.github.io")
+
+      // Result function
+      namespace.file("result.mcfunction",`#Result function - Generated at itchss.github.io\nsummon item ~ ~ ~ {Item:{id:"minecraft:${result}",Count:${resultcount}b,tag:{${resultNBT}}}}\nparticle ${particle} ~ ~ ~ 0.1 0.1 0.1 0.0 50 force @a\nplaysound ${sound} master @a ~ ~ ~ 100 1\nkill @e[type=item,distance=..1,limit=${item1count},nbt={Item:{id:"minecraft:${item1}",Count:${item1count}b}}]\nkill @e[type=item,distance=..1,limit=${item2count},nbt={Item:{id:"minecraft:${item2}",Count:${item2count}b}}]`)
+
+      // Download
+      zip.generateAsync({type:"blob"}).then(function(content){saveAs(content, "itchs_dropcrafting.zip")});
+    }
+
+    function generateCommand() {
+
+
+
+    }
+    
+    document.addEventListener('DOMContentLoaded', function(){submitInput.addEventListener('click', downloadDataPack, false)},false);
+  </script>
+ </body>
+</html>

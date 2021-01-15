@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- This code was created by Itchs#7216 on discord.
+    This code is protected by the MIT license:
+    Copyright 2021 Itchs
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <link rel="stylesheet" href="css/gui.css">
+    <link rel="stylesheet" href="css/generatorform.css">
   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
@@ -40,7 +51,7 @@
       <!-- Main Jumbotron & Information -->
       <div class="jumbotron popout_bg text-light">
         <h1 class="display-4">Click-GUI Generator</h1>
-          <p class="lead">Generates a data-pack which has Click GUIs in it! Created by Itchs#7216.<br> If you have any issues, feel free to contact me on Discord. My DMs are open! :) Currently only works for 1.16, Not 1.17.</p>
+          <p class="lead">Generates a data-pack which has Click GUIs in it! Created by Itchs#7216.<br> If you have any issues, feel free to contact me on Discord at Itchs#7216. My DMs are open! :) Currently only works for 1.16, Not 1.17.<br><p class="lead my-1" style="font-size: 20px;">Run this command to summon a place for the GUI: &lt;Can't be moven from the point its summoned without function &lt;</p>
           <pre class="bg-dark text-light p-2 mb-5"><code>execute as &lt;summoner&gt; at @s run function &lt;namespace&gt;:summon</code></pre>
       </div>
 
@@ -52,7 +63,7 @@
     <div class="wrapper">
       <form class="form">
         <!-- Objectives & Tags -->
-        <h2>Objectives & Tags</h1>
+        <h2>Objectives & Tags</h2>
         <br>
 
         <label id="scoreboardObj">
@@ -279,9 +290,9 @@
         <br>
         <br>
         <label id="submit">
-          <input type="submit" value="Generate data pack" class="btn btn-success btn-block btn-lg my-4 generate_btn_datapack">
+          <input type="submit" value="Generate data pack" class="btn btn-success btn-block btn-lg my-4 generate_btn">
         </label>
-        <a download="pack.zip" href="downloads/pack.zip"><button type="button" class="btn btn-success btn-block btn-lg my-4">Download Resource Pack</button></a>
+        <a download="pack.zip" href="downloads/pack.zip"><button type="button" class="btn btn-success btn-block btn-lg my-4 generate_btn">Download Resource Pack</button></a>
       </form>
     </div>
   </center>
@@ -295,7 +306,7 @@
       // Download data pack function
       function download(e){
 
-        e.preventDefault()
+        e.preventDefault();
 
         // Init formData
         var formData = new FormData(form[0]);
@@ -365,7 +376,7 @@
 
 
         // Pack mcmeta & data folder
-        zip.file("pack.mcmeta", '{ "pack": {"pack_format": 6,"description": "Chest GUI Data Pack"}}');
+        zip.file("pack.mcmeta", '{ "pack": {"pack_format": 6,"description": "Chest GUI Data Pack - Generated at https://itchss.github.io"}}');
         var data = zip.folder("data");
 
         // Minecraft folder & contents
@@ -423,7 +434,9 @@
         // Load function
         namespace.file("load.mcfunction",`scoreboard objectives add ${scoreboardObj} dummy\nscoreboard players set GUIMarker ${scoreboardObj} 1`);
 
-        zip.generateAsync({type:"blob"}).then(function(content){saveAs(content, "itchs_chestgui.zip")});}
+        // Download
+        zip.generateAsync({type:"blob"}).then(function(content){saveAs(content, "itchs_chestgui.zip")});
+      }
 
       document.addEventListener('DOMContentLoaded', function(){submitInput.addEventListener('click', download, false)},false);    
     </script>
