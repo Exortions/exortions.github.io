@@ -59,3 +59,13 @@ body {
  width: 400px !important;
  border-color: white !important;
 }
+.footer {
+ height: 10px !important;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: #282c2f !important;
+ color: white;
+ text-align: center;
+ padding-bottom: 50px;
+}
