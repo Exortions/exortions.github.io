@@ -8,8 +8,8 @@ Things on this website
 ------------------
 | Name                   | Type          | Languages                               | Link                                                                                     |
 | ---------------------- | ------------- | --------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Click-GUI Generator    | Generator     | Made with HTML,JS generates MCFUNCTION  | <[Click-GUI Generator](https://itchss.github.io/gui.html)> <[Tutorial]()>                |
-| DropCrafting Generator | Generator     | Made with HTML,JS generates MCFUNCTION  | <[Drop-Crafting Generator](https://itchss.github.io/dropcrafting.html)> <[Tutorial]()>   |
+| Click-GUI Generator    | Generator     | Made with HTML,JS generates MCFUNCTION  | <[Click-GUI Generator](https://itchss.github.io/gui.html)> <[Tutorial (Not ready yet)]()>                |
+| DropCrafting Generator | Generator     | Made with HTML,JS generates MCFUNCTION  | <[Drop-Crafting Generator](https://itchss.github.io/dropcrafting.html)> <[Tutorial Not ready yet]()>   |
 
 Contact info
 ============
