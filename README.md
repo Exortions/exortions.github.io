@@ -4,7 +4,7 @@ This is my portfolio! This contains all of my projects, and generators. Not all 
 
 Things on this website
 ------------------
-| Name                   | Type          | Languages                               | Link                                                                 |
-| ---------------------- | ------------- | --------------------------------------- | -------------------------------------------------------------------- |
-| Click-GUI Generator    | Generator     | Made with HTML,JS generates MCFUNCTION  | [Click-GUI Generator](https://itchss.github.io/gui.html) [Tutorial]()|
-| DropCrafting Generator | Generator     | Made with HTML,JS generates MCFUNCTION  | [Blob.js](https://itchss.github.io/dropcrafting.html) [Tutorial]()   |
+| Name                   | Type          | Languages                               | Link                                                                     |
+| ---------------------- | ------------- | --------------------------------------- | ------------------------------------------------------------------------ |
+| Click-GUI Generator    | Generator     | Made with HTML,JS generates MCFUNCTION  | <[Click-GUI Generator](https://itchss.github.io/gui.html)> <[Tutorial]()>|
+| DropCrafting Generator | Generator     | Made with HTML,JS generates MCFUNCTION  | <[Blob.js](https://itchss.github.io/dropcrafting.html)> <[Tutorial]()>   |
