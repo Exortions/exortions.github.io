@@ -2,7 +2,7 @@ Itchs' Creations
 ============
 This is my portfolio! This contains all of my projects, and generators. Not all have been listed here, but there are some big ones like a Click-GUI Generator or a Drop-Crafter generator. I mostly code in HTML, CSS, JS, and MCFUNCTION (Minecraft's built in NBT code)
 
-`[Website link](https:/itchss.github.io/)`
+[Website link](https:/itchss.github.io/)
 
 Things on this website
 ------------------
